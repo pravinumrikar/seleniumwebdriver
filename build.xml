@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="seleniumwebdriver">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-java/4.22.0/selenium-java-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-api/4.22.0/selenium-api-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.22.0/selenium-chrome-driver-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.22.0/selenium-chromium-driver-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-json/4.22.0/selenium-json-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-manager/4.22.0/selenium-manager-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-devtools-v124/4.22.0/selenium-devtools-v124-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-devtools-v125/4.22.0/selenium-devtools-v125-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-devtools-v126/4.22.0/selenium-devtools-v126-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.22.0/selenium-devtools-v85-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.22.0/selenium-edge-driver-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.22.0/selenium-firefox-driver-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-http/4.22.0/selenium-http-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.22.0/selenium-ie-driver-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.22.0/selenium-remote-driver-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/com/google/guava/guava/33.2.1-jre/guava-33.2.1-jre.jar"/>
+        <pathelement location="../../.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar"/>
+        <pathelement location="../../.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+        <pathelement location="../../.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar"/>
+        <pathelement location="../../.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar"/>
+        <pathelement location="../../.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar"/>
+        <pathelement location="../../.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-api/1.39.0/opentelemetry-api-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-context/1.39.0/opentelemetry-context-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.39.0/opentelemetry-exporter-logging-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.39.0/opentelemetry-sdk-common-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.39.0/opentelemetry-sdk-extension-autoconfigure-spi-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.39.0/opentelemetry-sdk-extension-autoconfigure-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.39.0-alpha/opentelemetry-api-incubator-1.39.0-alpha.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.39.0/opentelemetry-sdk-trace-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-sdk/1.39.0/opentelemetry-sdk-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.39.0/opentelemetry-sdk-metrics-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.39.0/opentelemetry-sdk-logs-1.39.0.jar"/>
+        <pathelement location="../../.m2/repository/net/bytebuddy/byte-buddy/1.14.17/byte-buddy-1.14.17.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-os/4.22.0/selenium-os-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.22.0/selenium-safari-driver-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/seleniumhq/selenium/selenium-support/4.22.0/selenium-support-4.22.0.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/poi/poi/5.3.0/poi-5.3.0.jar"/>
+        <pathelement location="../../.m2/repository/commons-codec/commons-codec/1.17.0/commons-codec-1.17.0.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar"/>
+        <pathelement location="../../.m2/repository/commons-io/commons-io/2.16.1/commons-io-2.16.1.jar"/>
+        <pathelement location="../../.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/poi/poi-ooxml/5.3.0/poi-ooxml-5.3.0.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/poi/poi-ooxml-lite/5.3.0/poi-ooxml-lite-5.3.0.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/xmlbeans/xmlbeans/5.2.1/xmlbeans-5.2.1.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/commons/commons-compress/1.26.2/commons-compress-1.26.2.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar"/>
+        <pathelement location="../../.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/logging/log4j/log4j-core/3.0.0-beta2/log4j-core-3.0.0-beta2.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/logging/log4j/log4j-plugins/3.0.0-beta2/log4j-plugins-3.0.0-beta2.jar"/>
+        <pathelement location="../../.m2/repository/org/testng/testng/7.10.2/testng-7.10.2.jar"/>
+        <pathelement location="../../.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar"/>
+        <pathelement location="../../.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar"/>
+        <pathelement location="../../.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar"/>
+        <pathelement location="../../.m2/repository/com/aventstack/extentreports/5.1.2/extentreports-5.1.2.jar"/>
+        <pathelement location="../../.m2/repository/io/reactivex/rxjava3/rxjava/3.1.6/rxjava-3.1.6.jar"/>
+        <pathelement location="../../.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar"/>
+        <pathelement location="../../.m2/repository/org/freemarker/freemarker/2.3.32/freemarker-2.3.32.jar"/>
+        <pathelement location="../../.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar"/>
+        <pathelement location="../../.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar"/>
+    </path>
+    <path id="TestNG.libraryclasspath">
+        <pathelement location="../../.p2/pool/plugins/org.testng_7.4.0.r202105021533.jar"/>
+        <pathelement location="../../.p2/pool/plugins/com.beust.jcommander_1.78.0.jar"/>
+        <pathelement location="../../.p2/pool/plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
+        <pathelement location="../../.p2/pool/plugins/org.yaml.snakeyaml_1.21.0.jar"/>
+        <pathelement location="../../.p2/pool/plugins/org.webjars.jquery_3.5.1.jar"/>
+    </path>
+    <path id="seleniumwebdriver.classpath">
+        <pathelement location="target/test-classes"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+        <pathelement location="target/classes"/>
+        <path refid="TestNG.libraryclasspath"/>
+    </path>
+    <path id="run.ActionsVsAction.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.BootstrapDropDown.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.BrikenLinks.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.CaptureScreenshot.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DatePickerDemo1.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DatePickerDemo2.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DisableAutomatedMessageOnScreen.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.doubleClickAction.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.dragAndDropActions.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.DynamicPaginationTable.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.EnableExtentionsAtRunTime.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ExplicitWait.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.FDCalculator.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.fileUpload.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.FluentWaitDemo.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.GoogleSearchAutoSuggestionDropdown.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HandleAlerts.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HandleAlertUsingExplicitWait.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HandleAuthenticatedPopup.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HandleCheckBoxes.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HandleFrames.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HandleRadiobuttons.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HandleSSL.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HandleSVGElement.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HeadlessTesting.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.HiddenDropdown.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.javaScriptExecutorDemo.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.LinkedHashMapEx1.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.LocatorDemo.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.locatorDemo1.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.LocatorDemo2.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.LocatorDemo3.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.LocatorDemo4.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.MouseHoverAction.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ReadingDataFromExcel.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ReadingPropertiesFile.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ReuseCodeOfDatePickerDemo2.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.rightClickAction.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.RunTestInIncognitoMode.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.sataicTable.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.scrollingPage.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.SelectDropDown.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.shadowDomElement.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.SleepCommand.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.WritingDataInSpecificRowAndCell.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.WritingDataIntoExcel.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.WritingDynamicDataIntoExcel.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <path id="run.ZoomInZoomOut.classpath">
+        <path refid="seleniumwebdriver.classpath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/test-classes"/>
+        <mkdir dir="target/classes"/>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/test-classes">
+            <fileset dir="src/test/resources">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+                <exclude name="**"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/java">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src/main/resources">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+                <exclude name="**"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/test-classes"/>
+        <delete dir="target/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/test/java"/>
+            <src path="src/test/resources"/>
+            <exclude name="**"/>
+            <classpath refid="seleniumwebdriver.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src/main/java"/>
+            <src path="src/main/resources"/>
+            <exclude name="**"/>
+            <classpath refid="seleniumwebdriver.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="ActionsVsAction">
+        <java classname="day6.ActionsVsAction" failonerror="true" fork="yes">
+            <classpath refid="run.ActionsVsAction.classpath"/>
+        </java>
+    </target>
+    <target name="BootstrapDropDown">
+        <java classname="day3.BootstrapDropDown" failonerror="true" fork="yes">
+            <classpath refid="run.BootstrapDropDown.classpath"/>
+        </java>
+    </target>
+    <target name="BrikenLinks">
+        <java classname="day9.BrikenLinks" failonerror="true" fork="yes">
+            <classpath refid="run.BrikenLinks.classpath"/>
+        </java>
+    </target>
+    <target name="CaptureScreenshot">
+        <java classname="day8.CaptureScreenshot" failonerror="true" fork="yes">
+            <classpath refid="run.CaptureScreenshot.classpath"/>
+        </java>
+    </target>
+    <target name="DatePickerDemo1">
+        <java classname="day5.DatePickerDemo1" failonerror="true" fork="yes">
+            <classpath refid="run.DatePickerDemo1.classpath"/>
+        </java>
+    </target>
+    <target name="DatePickerDemo2">
+        <java classname="day5.DatePickerDemo2" failonerror="true" fork="yes">
+            <classpath refid="run.DatePickerDemo2.classpath"/>
+        </java>
+    </target>
+    <target name="DisableAutomatedMessageOnScreen">
+        <java classname="day8.DisableAutomatedMessageOnScreen" failonerror="true" fork="yes">
+            <classpath refid="run.DisableAutomatedMessageOnScreen.classpath"/>
+        </java>
+    </target>
+    <target name="doubleClickAction">
+        <java classname="day6.doubleClickAction" failonerror="true" fork="yes">
+            <classpath refid="run.doubleClickAction.classpath"/>
+        </java>
+    </target>
+    <target name="dragAndDropActions">
+        <java classname="day6.dragAndDropActions" failonerror="true" fork="yes">
+            <classpath refid="run.dragAndDropActions.classpath"/>
+        </java>
+    </target>
+    <target name="DynamicPaginationTable">
+        <java classname="day4.DynamicPaginationTable" failonerror="true" fork="yes">
+            <classpath refid="run.DynamicPaginationTable.classpath"/>
+        </java>
+    </target>
+    <target name="EnableExtentionsAtRunTime">
+        <java classname="day8.EnableExtentionsAtRunTime" failonerror="true" fork="yes">
+            <classpath refid="run.EnableExtentionsAtRunTime.classpath"/>
+        </java>
+    </target>
+    <target name="ExplicitWait">
+        <java classname="day1.ExplicitWait" failonerror="true" fork="yes">
+            <classpath refid="run.ExplicitWait.classpath"/>
+        </java>
+    </target>
+    <target name="FDCalculator">
+        <java classname="day11.FDCalculator" failonerror="true" fork="yes">
+            <classpath refid="run.FDCalculator.classpath"/>
+        </java>
+    </target>
+    <target name="fileUpload">
+        <java classname="day7.fileUpload" failonerror="true" fork="yes">
+            <classpath refid="run.fileUpload.classpath"/>
+        </java>
+    </target>
+    <target name="FluentWaitDemo">
+        <java classname="day1.FluentWaitDemo" failonerror="true" fork="yes">
+            <classpath refid="run.FluentWaitDemo.classpath"/>
+        </java>
+    </target>
+    <target name="GoogleSearchAutoSuggestionDropdown">
+        <java classname="day3.GoogleSearchAutoSuggestionDropdown" failonerror="true" fork="yes">
+            <classpath refid="run.GoogleSearchAutoSuggestionDropdown.classpath"/>
+        </java>
+    </target>
+    <target name="HandleAlerts">
+        <java classname="day2.HandleAlerts" failonerror="true" fork="yes">
+            <classpath refid="run.HandleAlerts.classpath"/>
+        </java>
+    </target>
+    <target name="HandleAlertUsingExplicitWait">
+        <java classname="day2.HandleAlertUsingExplicitWait" failonerror="true" fork="yes">
+            <classpath refid="run.HandleAlertUsingExplicitWait.classpath"/>
+        </java>
+    </target>
+    <target name="HandleAuthenticatedPopup">
+        <java classname="day2.HandleAuthenticatedPopup" failonerror="true" fork="yes">
+            <classpath refid="run.HandleAuthenticatedPopup.classpath"/>
+        </java>
+    </target>
+    <target name="HandleCheckBoxes">
+        <java classname="day2.HandleCheckBoxes" failonerror="true" fork="yes">
+            <classpath refid="run.HandleCheckBoxes.classpath"/>
+        </java>
+    </target>
+    <target name="HandleFrames">
+        <java classname="day3.HandleFrames" failonerror="true" fork="yes">
+            <classpath refid="run.HandleFrames.classpath"/>
+        </java>
+    </target>
+    <target name="HandleRadiobuttons">
+        <java classname="day2.HandleRadiobuttons" failonerror="true" fork="yes">
+            <classpath refid="run.HandleRadiobuttons.classpath"/>
+        </java>
+    </target>
+    <target name="HandleSSL">
+        <java classname="day8.HandleSSL" failonerror="true" fork="yes">
+            <classpath refid="run.HandleSSL.classpath"/>
+        </java>
+    </target>
+    <target name="HandleSVGElement">
+        <java classname="day9.HandleSVGElement" failonerror="true" fork="yes">
+            <classpath refid="run.HandleSVGElement.classpath"/>
+        </java>
+    </target>
+    <target name="HeadlessTesting">
+        <java classname="day8.HeadlessTesting" failonerror="true" fork="yes">
+            <classpath refid="run.HeadlessTesting.classpath"/>
+        </java>
+    </target>
+    <target name="HiddenDropdown">
+        <java classname="day3.HiddenDropdown" failonerror="true" fork="yes">
+            <classpath refid="run.HiddenDropdown.classpath"/>
+        </java>
+    </target>
+    <target name="javaScriptExecutorDemo">
+        <java classname="day7.javaScriptExecutorDemo" failonerror="true" fork="yes">
+            <classpath refid="run.javaScriptExecutorDemo.classpath"/>
+        </java>
+    </target>
+    <target name="LinkedHashMapEx1">
+        <java classname="LinkedHashMapEx1" failonerror="true" fork="yes">
+            <classpath refid="run.LinkedHashMapEx1.classpath"/>
+        </java>
+    </target>
+    <target name="LocatorDemo">
+        <java classname="day1.LocatorDemo" failonerror="true" fork="yes">
+            <classpath refid="run.LocatorDemo.classpath"/>
+        </java>
+    </target>
+    <target name="locatorDemo1">
+        <java classname="Locators.locatorDemo1" failonerror="true" fork="yes">
+            <classpath refid="run.locatorDemo1.classpath"/>
+        </java>
+    </target>
+    <target name="LocatorDemo2">
+        <java classname="day1.LocatorDemo2" failonerror="true" fork="yes">
+            <classpath refid="run.LocatorDemo2.classpath"/>
+        </java>
+    </target>
+    <target name="LocatorDemo3">
+        <java classname="day1.LocatorDemo3" failonerror="true" fork="yes">
+            <classpath refid="run.LocatorDemo3.classpath"/>
+        </java>
+    </target>
+    <target name="LocatorDemo4">
+        <java classname="day1.LocatorDemo4" failonerror="true" fork="yes">
+            <classpath refid="run.LocatorDemo4.classpath"/>
+        </java>
+    </target>
+    <target name="MouseHoverAction">
+        <java classname="day6.MouseHoverAction" failonerror="true" fork="yes">
+            <classpath refid="run.MouseHoverAction.classpath"/>
+        </java>
+    </target>
+    <target name="ReadingDataFromExcel">
+        <java classname="day10.ReadingDataFromExcel" failonerror="true" fork="yes">
+            <classpath refid="run.ReadingDataFromExcel.classpath"/>
+        </java>
+    </target>
+    <target name="ReadingPropertiesFile">
+        <java classname="day11.ReadingPropertiesFile" failonerror="true" fork="yes">
+            <classpath refid="run.ReadingPropertiesFile.classpath"/>
+        </java>
+    </target>
+    <target name="ReuseCodeOfDatePickerDemo2">
+        <java classname="day5.ReuseCodeOfDatePickerDemo2" failonerror="true" fork="yes">
+            <classpath refid="run.ReuseCodeOfDatePickerDemo2.classpath"/>
+        </java>
+    </target>
+    <target name="rightClickAction">
+        <java classname="day6.rightClickAction" failonerror="true" fork="yes">
+            <classpath refid="run.rightClickAction.classpath"/>
+        </java>
+    </target>
+    <target name="RunTestInIncognitoMode">
+        <java classname="day8.RunTestInIncognitoMode" failonerror="true" fork="yes">
+            <classpath refid="run.RunTestInIncognitoMode.classpath"/>
+        </java>
+    </target>
+    <target name="sataicTable">
+        <java classname="day4.sataicTable" failonerror="true" fork="yes">
+            <classpath refid="run.sataicTable.classpath"/>
+        </java>
+    </target>
+    <target name="scrollingPage">
+        <java classname="day7.scrollingPage" failonerror="true" fork="yes">
+            <classpath refid="run.scrollingPage.classpath"/>
+        </java>
+    </target>
+    <target name="SelectDropDown">
+        <java classname="day3.SelectDropDown" failonerror="true" fork="yes">
+            <classpath refid="run.SelectDropDown.classpath"/>
+        </java>
+    </target>
+    <target name="shadowDomElement">
+        <java classname="day9.shadowDomElement" failonerror="true" fork="yes">
+            <classpath refid="run.shadowDomElement.classpath"/>
+        </java>
+    </target>
+    <target name="SleepCommand">
+        <java classname="day1.SleepCommand" failonerror="true" fork="yes">
+            <classpath refid="run.SleepCommand.classpath"/>
+        </java>
+    </target>
+    <target name="WritingDataInSpecificRowAndCell">
+        <java classname="day10.WritingDataInSpecificRowAndCell" failonerror="true" fork="yes">
+            <classpath refid="run.WritingDataInSpecificRowAndCell.classpath"/>
+        </java>
+    </target>
+    <target name="WritingDataIntoExcel">
+        <java classname="day10.WritingDataIntoExcel" failonerror="true" fork="yes">
+            <classpath refid="run.WritingDataIntoExcel.classpath"/>
+        </java>
+    </target>
+    <target name="WritingDynamicDataIntoExcel">
+        <java classname="day10.WritingDynamicDataIntoExcel" failonerror="true" fork="yes">
+            <classpath refid="run.WritingDynamicDataIntoExcel.classpath"/>
+        </java>
+    </target>
+    <target name="ZoomInZoomOut">
+        <java classname="day7.ZoomInZoomOut" failonerror="true" fork="yes">
+            <classpath refid="run.ZoomInZoomOut.classpath"/>
+        </java>
+    </target>
+</project>
